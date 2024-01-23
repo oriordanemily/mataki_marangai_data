@@ -4,6 +4,7 @@ on:
   schedule:
     # Runs at 11:04 NZ (23:04) every day (UTC)
     - cron: '13 22 * * *'
+  workflow_dispatch:
 
 jobs:
   fetch-and-commit:
