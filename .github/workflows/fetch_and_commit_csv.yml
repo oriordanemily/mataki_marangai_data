@@ -17,7 +17,7 @@ jobs:
     - name: Fetch CSV using cURL
       run: |
         curl -X GET "https://api.citsci.org/projects/763e36aa-d485-425e-b2fd-05fffec0f5d3/observations" \
-        -H "accept: application/ld+json" \
+        -H "accept: text/csv" \ 
         -H "API-Key: ${{ secrets.API_KEY }}" \
         -o filename.csv
 
@@ -32,3 +32,5 @@ jobs:
         git commit -m "Update CSV"
         # Use main or your default branch
         git push origin main
+
+# # application/ld+json" \
