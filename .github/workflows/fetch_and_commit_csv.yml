@@ -3,7 +3,7 @@ name: Fetch and Commit CSV
 on:
   schedule:
     # Runs at 11:04 NZ (23:04) every day (UTC)
-    - cron: '08 22 * * *'
+    - cron: '13 22 * * *'
 
 jobs:
   fetch-and-commit:
