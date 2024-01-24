@@ -2,7 +2,6 @@ name: Fetch and Commit JSON
 
 on:
   schedule:
-    # Runs at 11:04 NZ (23:04) every day (UTC)
     - cron: '0 * * * *'
   workflow_dispatch:
 
