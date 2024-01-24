@@ -28,5 +28,6 @@ jobs:
     - name: Commit and Push
       run: |
         git add filename.json
-        git commit -m "Update JSON"
+        git diff --staged --exit-code || git commit -m "Update JSON"
         git push origin main
+
