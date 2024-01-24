@@ -1,9 +1,9 @@
-name: Fetch and Commit CSV
+name: Fetch and Commit JSON
 
 on:
   schedule:
     # Runs at 11:04 NZ (23:04) every day (UTC)
-    - cron: '32 00 * * *'
+    - cron: '41 00 * * *'
   workflow_dispatch:
 
 jobs:
