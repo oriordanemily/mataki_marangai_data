@@ -3,7 +3,7 @@ name: Fetch and Commit CSV
 on:
   schedule:
     # Runs at 11:04 NZ (23:04) every day (UTC)
-    - cron: '18 00 * * *'
+    - cron: '25 00 * * *'
   workflow_dispatch:
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
 
     - name: Commit and Push
       run: |
-        git add filename.j
+        git add filename.json
         git commit -m "Update CSV"
         # Use main or your default branch
         git push origin main
