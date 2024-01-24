@@ -2,7 +2,7 @@ name: Fetch and Commit JSON
 
 on:
   schedule:
-    - cron: '30 * * * *'
+    - cron: '40 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -29,5 +29,4 @@ jobs:
       run: |
         git add filename.json
         git commit -m "Update JSON"
-        # Use main or your default branch
         git push origin main
