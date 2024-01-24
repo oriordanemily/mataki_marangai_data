@@ -28,7 +28,7 @@ jobs:
 
     - name: Commit and Push
       run: |
-        git add filename.csv
+        git add filename.j
         git commit -m "Update CSV"
         # Use main or your default branch
         git push origin main
