@@ -3,7 +3,7 @@ name: Fetch and Commit CSV
 on:
   schedule:
     # Runs at 11:04 NZ (23:04) every day (UTC)
-    - cron: '25 00 * * *'
+    - cron: '32 00 * * *'
   workflow_dispatch:
 
 jobs:
@@ -14,12 +14,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Fetch CSV using cURL
+    - name: Fetch JSON using cURL
       run: |
         curl -X GET "https://api.citsci.org/projects/763e36aa-d485-425e-b2fd-05fffec0f5d3/observations" \
-        -H "accept: application/ld+json" \ 
+        -H "accept: application/ld+json" \
         -H "API-Key: ${{ secrets.API_KEY }}" \
         -o filename.json
+
 
     - name: Configure git
       run: |
